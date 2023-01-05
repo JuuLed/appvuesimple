@@ -256,24 +256,23 @@
 				methods: {
 					fetchDataAsync: async function (apiURL) {
 						try {
-					  	const response = await axios.get(apiURL, config)
+					  		const response = await axios.get(apiURL, config)
 						  	console.log(response.data)
 						  	this.listPoke = response.data
-					  } catch(error) {
-					    console.log(error);
-					  }
+						} catch(error) {
+							console.log(error);
+						}
 					},
 					
 					pokemonDataAsync: async function (nbPkm) {
 						try {
-					  	const response = await axios.get(apiDetailPKM +"/"+nbPkm)
+					  		const response = await axios.get(apiDetailPKM +"/"+nbPkm)
 						  	console.log(response.data)
 						  	this.pkmDetail = response.data
-					  } catch(error) {
-					    console.log(error);
-					  }
+						} catch(error) {
+							console.log(error);
+						}
 					}
-                    
 				},
 			}).mount("#app");
 		</script>
